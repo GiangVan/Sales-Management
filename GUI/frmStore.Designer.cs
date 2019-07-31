@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStore));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.lstCart = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,7 +42,7 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnDelOR = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBill = new System.Windows.Forms.TextBox();
@@ -61,9 +61,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSettle = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.txtStock = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstProduct = new System.Windows.Forms.ListView();
             this.label17 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.TextBox();
@@ -92,12 +92,12 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhoneEmail = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -107,18 +107,18 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.listView2);
-            this.panel4.Controls.Add(this.btnDelOR);
+            this.panel4.Controls.Add(this.lstCart);
+            this.panel4.Controls.Add(this.btnRemove);
             this.panel4.Controls.Add(this.lblDate);
             this.panel4.Location = new System.Drawing.Point(669, 10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(523, 435);
             this.panel4.TabIndex = 81;
             // 
-            // listView2
+            // lstCart
             // 
-            this.listView2.BackColor = System.Drawing.Color.White;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstCart.BackColor = System.Drawing.Color.White;
+            this.lstCart.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
@@ -127,17 +127,17 @@
             this.columnHeader9,
             this.columnHeader1,
             this.columnHeader2});
-            this.listView2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(12, 35);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(499, 349);
-            this.listView2.TabIndex = 46;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.lstCart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lstCart.FullRowSelect = true;
+            this.lstCart.GridLines = true;
+            this.lstCart.HideSelection = false;
+            this.lstCart.Location = new System.Drawing.Point(12, 35);
+            this.lstCart.Name = "lstCart";
+            this.lstCart.Size = new System.Drawing.Size(499, 349);
+            this.lstCart.TabIndex = 46;
+            this.lstCart.UseCompatibleStateImageBehavior = false;
+            this.lstCart.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader4
             // 
@@ -177,22 +177,22 @@
             this.columnHeader2.Text = "Brand";
             this.columnHeader2.Width = 80;
             // 
-            // btnDelOR
+            // btnRemove
             // 
-            this.btnDelOR.BackColor = System.Drawing.Color.Red;
-            this.btnDelOR.FlatAppearance.BorderSize = 0;
-            this.btnDelOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelOR.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelOR.ForeColor = System.Drawing.Color.White;
-            this.btnDelOR.Image = ((System.Drawing.Image)(resources.GetObject("btnDelOR.Image")));
-            this.btnDelOR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelOR.Location = new System.Drawing.Point(392, 393);
-            this.btnDelOR.Name = "btnDelOR";
-            this.btnDelOR.Size = new System.Drawing.Size(119, 34);
-            this.btnDelOR.TabIndex = 4;
-            this.btnDelOR.Text = "Remove";
-            this.btnDelOR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelOR.UseVisualStyleBackColor = false;
+            this.btnRemove.BackColor = System.Drawing.Color.Red;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemove.Location = new System.Drawing.Point(392, 393);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(119, 34);
+            this.btnRemove.TabIndex = 4;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.UseVisualStyleBackColor = false;
             // 
             // lblDate
             // 
@@ -344,12 +344,12 @@
             // 
             // Price
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.Price.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.Price.DefaultCellStyle = dataGridViewCellStyle5;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.Width = 70;
@@ -401,9 +401,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.txtStock);
-            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.lstProduct);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtSize);
@@ -437,19 +437,20 @@
             this.panel1.Size = new System.Drawing.Size(648, 435);
             this.panel1.TabIndex = 80;
             // 
-            // button3
+            // btnBack
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 26);
-            this.button3.TabIndex = 70;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(2, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(31, 26);
+            this.btnBack.TabIndex = 70;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // txtStock
             // 
@@ -461,21 +462,21 @@
             this.txtStock.Size = new System.Drawing.Size(149, 27);
             this.txtStock.TabIndex = 69;
             // 
-            // listView1
+            // lstProduct
             // 
-            this.listView1.BackColor = System.Drawing.Color.White;
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(10, 63);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(384, 291);
-            this.listView1.TabIndex = 45;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lstProduct.BackColor = System.Drawing.Color.White;
+            this.lstProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstProduct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lstProduct.FullRowSelect = true;
+            this.lstProduct.GridLines = true;
+            this.lstProduct.HideSelection = false;
+            this.lstProduct.Location = new System.Drawing.Point(10, 63);
+            this.lstProduct.Name = "lstProduct";
+            this.lstProduct.Size = new System.Drawing.Size(384, 291);
+            this.lstProduct.TabIndex = 45;
+            this.lstProduct.UseCompatibleStateImageBehavior = false;
+            this.lstProduct.View = System.Windows.Forms.View.Details;
             // 
             // label17
             // 
@@ -762,41 +763,41 @@
             // 
             // Description
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.Description.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.Description.DefaultCellStyle = dataGridViewCellStyle6;
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtName);
             this.panel3.Controls.Add(this.lblTimeLoggedIn);
             this.panel3.Controls.Add(this.txtQty2);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtAddress);
             this.panel3.Controls.Add(this.txtID2);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.txtPhoneEmail);
             this.panel3.Controls.Add(this.txtStock2);
             this.panel3.Location = new System.Drawing.Point(12, 455);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(646, 155);
             this.panel3.TabIndex = 83;
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(139, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(492, 27);
-            this.textBox1.TabIndex = 65;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.Location = new System.Drawing.Point(139, 8);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(492, 27);
+            this.txtName.TabIndex = 65;
             // 
             // label19
             // 
@@ -806,9 +807,9 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label19.Location = new System.Drawing.Point(7, 77);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(112, 21);
+            this.label19.Size = new System.Drawing.Size(111, 21);
             this.label19.TabIndex = 70;
-            this.label19.Text = "Your change";
+            this.label19.Text = "Phone/ Email";
             // 
             // label20
             // 
@@ -818,9 +819,9 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label20.Location = new System.Drawing.Point(7, 11);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(28, 21);
+            this.label20.Size = new System.Drawing.Size(58, 21);
             this.label20.TabIndex = 66;
-            this.label20.Text = "Bill";
+            this.label20.Text = "Name";
             // 
             // label21
             // 
@@ -830,27 +831,27 @@
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label21.Location = new System.Drawing.Point(7, 44);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 21);
+            this.label21.Size = new System.Drawing.Size(72, 21);
             this.label21.TabIndex = 69;
-            this.label21.Text = "Payment";
+            this.label21.Text = "Address";
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(139, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(492, 27);
-            this.textBox2.TabIndex = 67;
+            this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddress.Location = new System.Drawing.Point(139, 41);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(492, 27);
+            this.txtAddress.TabIndex = 67;
             // 
-            // textBox3
+            // txtPhoneEmail
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(139, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(492, 27);
-            this.textBox3.TabIndex = 68;
+            this.txtPhoneEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPhoneEmail.Location = new System.Drawing.Point(139, 74);
+            this.txtPhoneEmail.Name = "txtPhoneEmail";
+            this.txtPhoneEmail.Size = new System.Drawing.Size(492, 27);
+            this.txtPhoneEmail.TabIndex = 68;
             // 
             // frmStore
             // 
@@ -864,6 +865,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStore";
             this.Text = "frmStore";
+            this.Load += new System.EventHandler(this.FrmStore_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -879,7 +881,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lstCart;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
@@ -888,7 +890,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Button btnDelOR;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSettle;
@@ -904,12 +906,12 @@
         private System.Windows.Forms.TextBox txtID2;
         private System.Windows.Forms.TextBox txtStock2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstProduct;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSize;
@@ -938,11 +940,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtPhoneEmail;
     }
 }
