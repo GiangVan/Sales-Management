@@ -41,10 +41,10 @@ namespace DAL
             reader.Close();
             return dsSale;
         }
-        public List<tblRecord> search(string Desciption)
+        public List<tblRecord> search(string Description)
         {
 
-            SqlDataReader reader = ReadData("Select * from tblRecord where Description like '"+Desciption+"%' Order by DateTime DESC");
+            SqlDataReader reader = ReadData("Select * from tblRecord where Description like '"+ Description + "%' Order by DateTime DESC");
             List<tblRecord> dsSale = new List<tblRecord>();
             while (reader.Read())
             {

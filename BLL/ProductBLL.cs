@@ -13,7 +13,13 @@ namespace BLL
         public List<tblProduct> GetProducts()
         {
             ProductDAL dal = new ProductDAL();
-            return dal.GetProducts();
+            return dal.GetProductsDAL();
+        }
+
+        public List<tblProduct> SearchProductBLL(string Descrition)
+        {
+            ProductDAL dal = new ProductDAL();
+            return dal.SearchProductDAL(Descrition);
         }
     }
 }
