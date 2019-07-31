@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class tblCashierRecord
+    public class tblRecord
     {
-        public string Cashier { get; set; }
-        public string PID { get; set; }
-        public string Descrip { get; set; }
+        public string ID { get; set; }
+        public string Description { get; set; }
         public string Price { get; set; }
         public string Quantity { get; set; }
         public string TotalSum { get; set; }

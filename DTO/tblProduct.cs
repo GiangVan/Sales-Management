@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class tblProduct
+    public class tblProduct
     {
         public string ID { get; set; }
         public string Descrip { get; set; }

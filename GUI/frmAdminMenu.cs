@@ -62,6 +62,9 @@ namespace GUI
         {
             lbl4.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
+            frmSaleRecord frmSaleRecord = new frmSaleRecord();
+            frmSaleRecord.MdiParent = this;
+            frmSaleRecord.Show();
         }
 
         private void BtnLogRecord_Click(object sender, EventArgs e)
