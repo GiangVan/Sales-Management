@@ -49,16 +49,6 @@ namespace DAL
             SqlDataReader reader = command.ExecuteReader();
             return reader;
         }
-        public SqlDataReader ReadData(string sql)
-        {
-            command = new SqlCommand();
-            command.CommandType = CommandType.Text;
-            command.CommandText = sql;
-            command.Connection = connection;
-            OpenConnection();
-            SqlDataReader reader = command.ExecuteReader();
-            return reader;
-        }
         public bool WriteData(string sql, SqlParameter[] parameters)
         {
             command = new SqlCommand();
@@ -66,7 +56,7 @@ namespace DAL
             command.CommandText = sql;
             command.Connection = connection;
             OpenConnection();
-            command.Parameters.AddRange(pars);
+            command.Parameters.AddRange(parameters);
             int kq = command.ExecuteNonQuery();
             return kq > 0;
         }
