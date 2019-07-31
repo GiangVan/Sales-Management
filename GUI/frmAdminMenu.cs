@@ -43,42 +43,47 @@ namespace GUI
         private void BtnView_Click(object sender, EventArgs e)
         {
             lbl1.BackColor = Color.SkyBlue;
-            lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = Color.White;
+            lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
         }
 
         private void BtnStaffManagement_Click(object sender, EventArgs e)
         {
             lbl2.BackColor = Color.SkyBlue;
-            lbl1.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = Color.White;
+            lbl1.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
         }
 
         private void BtnProductManagement_Click(object sender, EventArgs e)
         {
             lbl3.BackColor = Color.SkyBlue;
-            lbl1.BackColor = lbl2.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = Color.White;
+            lbl1.BackColor = lbl2.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
         }
 
         private void BtnSaleRecord_Click(object sender, EventArgs e)
         {
             lbl4.BackColor = Color.SkyBlue;
-            lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl5.BackColor = lbl6.BackColor = Color.White;
+            lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
         }
 
         private void BtnLogRecord_Click(object sender, EventArgs e)
         {
             lbl5.BackColor = Color.SkyBlue;
-            lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl6.BackColor = Color.White;
+            lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
         }
 
         private void BtnRestock_Click(object sender, EventArgs e)
         {
             lbl6.BackColor = Color.SkyBlue;
-            lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = Color.White;
+            lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl7.BackColor = Color.White;
         }
-
+        private void Panel2_Click(object sender, EventArgs e)
+        {
+            lbl7.BackColor = Color.SkyBlue;
+            lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = Color.White;
+        }
         private void FrmAdminMenu_Load(object sender, EventArgs e)
         {
-
+            panel2.Focus();
         }
+
     }
 }

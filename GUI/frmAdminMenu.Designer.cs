@@ -44,7 +44,10 @@
             this.btnProductManagement = new System.Windows.Forms.Button();
             this.btnStaffManagement = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
+            this.lbl7 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,17 +71,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 60);
+            this.panel1.Size = new System.Drawing.Size(1200, 50);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::GUI.Properties.Resources.Logo2;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Controls.Add(this.lbl7);
             this.panel2.Location = new System.Drawing.Point(29, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(150, 58);
-            this.panel2.TabIndex = 18;
+            this.panel2.Size = new System.Drawing.Size(150, 46);
+            this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.Panel2_Click);
             // 
             // btnRestock
             // 
@@ -89,49 +94,49 @@
             this.btnRestock.Location = new System.Drawing.Point(875, 5);
             this.btnRestock.Name = "btnRestock";
             this.btnRestock.Size = new System.Drawing.Size(100, 36);
-            this.btnRestock.TabIndex = 2;
+            this.btnRestock.TabIndex = 7;
             this.btnRestock.Text = "Restock";
             this.btnRestock.UseVisualStyleBackColor = true;
             this.btnRestock.Click += new System.EventHandler(this.BtnRestock_Click);
             // 
             // lbl6
             // 
-            this.lbl6.Location = new System.Drawing.Point(875, 50);
+            this.lbl6.Location = new System.Drawing.Point(875, 42);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(100, 5);
             this.lbl6.TabIndex = 17;
             // 
             // lbl5
             // 
-            this.lbl5.Location = new System.Drawing.Point(750, 50);
+            this.lbl5.Location = new System.Drawing.Point(750, 42);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(100, 5);
             this.lbl5.TabIndex = 16;
             // 
             // lbl4
             // 
-            this.lbl4.Location = new System.Drawing.Point(625, 50);
+            this.lbl4.Location = new System.Drawing.Point(625, 42);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(100, 5);
             this.lbl4.TabIndex = 15;
             // 
             // lbl3
             // 
-            this.lbl3.Location = new System.Drawing.Point(500, 50);
+            this.lbl3.Location = new System.Drawing.Point(500, 42);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(100, 5);
             this.lbl3.TabIndex = 14;
             // 
             // lbl2
             // 
-            this.lbl2.Location = new System.Drawing.Point(375, 50);
+            this.lbl2.Location = new System.Drawing.Point(375, 42);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(100, 5);
             this.lbl2.TabIndex = 13;
             // 
             // lbl1
             // 
-            this.lbl1.Location = new System.Drawing.Point(250, 50);
+            this.lbl1.Location = new System.Drawing.Point(250, 42);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(100, 5);
             this.lbl1.TabIndex = 12;
@@ -142,10 +147,10 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::GUI.Properties.Resources.cancel;
-            this.btnExit.Location = new System.Drawing.Point(1155, 10);
+            this.btnExit.Location = new System.Drawing.Point(1155, 8);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(36, 36);
-            this.btnExit.TabIndex = 11;
+            this.btnExit.TabIndex = 9;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
@@ -155,7 +160,7 @@
             this.lblUser.Location = new System.Drawing.Point(1000, 15);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(140, 18);
-            this.lblUser.TabIndex = 10;
+            this.lblUser.TabIndex = 8;
             this.lblUser.Text = "Admin";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblUser.Click += new System.EventHandler(this.LblUser_Click);
@@ -169,7 +174,7 @@
             this.btnLogRecord.Location = new System.Drawing.Point(750, 5);
             this.btnLogRecord.Name = "btnLogRecord";
             this.btnLogRecord.Size = new System.Drawing.Size(100, 36);
-            this.btnLogRecord.TabIndex = 9;
+            this.btnLogRecord.TabIndex = 6;
             this.btnLogRecord.Text = "Log";
             this.btnLogRecord.UseVisualStyleBackColor = true;
             this.btnLogRecord.Click += new System.EventHandler(this.BtnLogRecord_Click);
@@ -183,7 +188,7 @@
             this.btnSaleRecord.Location = new System.Drawing.Point(625, 5);
             this.btnSaleRecord.Name = "btnSaleRecord";
             this.btnSaleRecord.Size = new System.Drawing.Size(100, 36);
-            this.btnSaleRecord.TabIndex = 8;
+            this.btnSaleRecord.TabIndex = 5;
             this.btnSaleRecord.Text = "Sale Record";
             this.btnSaleRecord.UseVisualStyleBackColor = true;
             this.btnSaleRecord.Click += new System.EventHandler(this.BtnSaleRecord_Click);
@@ -197,7 +202,7 @@
             this.btnProductManagement.Location = new System.Drawing.Point(500, 5);
             this.btnProductManagement.Name = "btnProductManagement";
             this.btnProductManagement.Size = new System.Drawing.Size(100, 36);
-            this.btnProductManagement.TabIndex = 7;
+            this.btnProductManagement.TabIndex = 4;
             this.btnProductManagement.Text = "Product";
             this.btnProductManagement.UseVisualStyleBackColor = true;
             this.btnProductManagement.Click += new System.EventHandler(this.BtnProductManagement_Click);
@@ -211,7 +216,7 @@
             this.btnStaffManagement.Location = new System.Drawing.Point(375, 5);
             this.btnStaffManagement.Name = "btnStaffManagement";
             this.btnStaffManagement.Size = new System.Drawing.Size(100, 36);
-            this.btnStaffManagement.TabIndex = 6;
+            this.btnStaffManagement.TabIndex = 3;
             this.btnStaffManagement.Text = "Staff Manage";
             this.btnStaffManagement.UseVisualStyleBackColor = true;
             this.btnStaffManagement.Click += new System.EventHandler(this.BtnStaffManagement_Click);
@@ -225,10 +230,26 @@
             this.btnView.Location = new System.Drawing.Point(250, 5);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 36);
-            this.btnView.TabIndex = 3;
+            this.btnView.TabIndex = 2;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.BtnView_Click);
+            // 
+            // lbl7
+            // 
+            this.lbl7.BackColor = System.Drawing.Color.SkyBlue;
+            this.lbl7.Location = new System.Drawing.Point(46, 30);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(100, 5);
+            this.lbl7.TabIndex = 19;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 50);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1200, 750);
+            this.panel3.TabIndex = 0;
             // 
             // frmAdminMenu
             // 
@@ -236,13 +257,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "frmAdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdminMenu";
             this.Load += new System.EventHandler(this.FrmAdminMenu_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -265,5 +289,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbl7;
+        private System.Windows.Forms.Panel panel3;
     }
 }
