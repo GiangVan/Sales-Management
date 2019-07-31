@@ -55,6 +55,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogTrail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogTrail.Designer.cs">
+      <DependentUpon>frmLogTrail.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogTrail.resx">
+      <DependentUpon>frmLogTrail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
