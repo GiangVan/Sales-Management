@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DTO
-{//hello friends
+{//hello friends hh
     public class tblProduct
     {
         public string ID { get; set; }
