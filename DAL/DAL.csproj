@@ -41,13 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashierRecordDAL.cs" />
     <Compile Include="DatabaseService.cs" />
     <Compile Include="LogAdminDAL.cs" />
     <Compile Include="LoginDAL.cs" />
-    <Compile Include="LogTrailDAL.cs" />
+    <Compile Include="ProductDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecordDAL.cs" />
-    <Compile Include="RemoveLogTrailDAL.cs" />
+    <Compile Include="RemoveAllDAL.cs" />
+    <Compile Include="SaleRecordDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
