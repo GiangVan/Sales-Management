@@ -189,6 +189,7 @@
             this.Name = "frmLogAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogAdmin";
+            this.Load += new System.EventHandler(this.FrmLogAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -31,7 +31,7 @@ namespace GUI
                 MessageBox.Show("Welcome", "Susscess", MessageBoxButtons.OK, MessageBoxIcon.None);
                 frmStart frmStart = (frmStart)Application.OpenForms["frmStart"];
                 frmStart.Hide();
-                this.Hide();//aaa
+                this.Hide();
             }
             else
             {

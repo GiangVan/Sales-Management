@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminMenu.Designer.cs">
+      <DependentUpon>frmAdminMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +74,17 @@
     <Compile Include="frmLogAdmin.Designer.cs">
       <DependentUpon>frmLogAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStore.Designer.cs">
+      <DependentUpon>frmStore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdminMenu.resx">
+      <DependentUpon>frmAdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogAdmin.resx">
       <DependentUpon>frmLogAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStore.resx">
+      <DependentUpon>frmStore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -122,6 +141,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
