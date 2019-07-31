@@ -36,6 +36,8 @@ namespace GUI
                 MessageBox.Show("Welcome", "Susscess", MessageBoxButtons.OK, MessageBoxIcon.None);
                 frmStart frmStart = (frmStart)Application.OpenForms["frmStart"];
                 frmStart.Hide();
+                frmAdminMenu frmAdminMenu = new frmAdminMenu();
+                frmAdminMenu.Show();
                 this.Hide();
             }
             else
@@ -47,6 +49,11 @@ namespace GUI
         private void Timer1_Tick(object sender, EventArgs e)
         {
             lblDateTime.Text = DateTime.Now.ToString();
+        }
+
+        private void FrmLogAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
