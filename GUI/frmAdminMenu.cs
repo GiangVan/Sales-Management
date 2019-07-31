@@ -88,5 +88,9 @@ namespace GUI
             panel2.Focus();
         }
 
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
