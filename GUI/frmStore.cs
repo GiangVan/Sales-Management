@@ -112,8 +112,6 @@ namespace GUI
                     UpdateBill();
                     ClearAllProductTextBox();
                     txtChange.Text = "0.00";
-
-                    panel2.Show();
                 }
                 // trường hợp đã có sản phẩm trong lstvCart
                 else if (lstvCart.Items.ContainsKey(txtID.Text))
@@ -222,7 +220,6 @@ namespace GUI
                 txtChange.Text = "";
                 txtPayment.Text = "";
                 txtStock.Text = "";
-                panel2.Visible = false;
             }
         }
     }
