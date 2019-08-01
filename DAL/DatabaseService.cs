@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DatabaseService
     {
-        public string stringConnection = @"Data Source=PEAGA;Initial Catalog=Database;Integrated Security=True";
+        public string stringConnection = @"Data Source=DESKTOP-81MHUS8;Initial Catalog=Database;Integrated Security=True";
         public SqlConnection connection;
         public SqlCommand command;
         public DatabaseService()

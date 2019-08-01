@@ -33,39 +33,7 @@ namespace GUI
             products = bll.GetProducts();
             try
             {
-                lstProduct.Items.Clear();
-                lstProduct.Columns.Clear();
-                lstProduct.Columns.Add("Product ID", 0);
-                lstProduct.Columns.Add("Product Name", 150);
-
-                lstProduct.Columns.Add("Price", 70);
-                lstProduct.Columns.Add("Type", 70);
-                lstProduct.Columns.Add("Size", 70);
-                lstProduct.Columns.Add("Brand", 70);
-                lstProduct.Columns.Add("Stock", 70);
-                lstProduct.Columns.Add("CritLimit", 0);
-                while (products != null)
-                {
-                    lst = lstProduct.Items.Add(products[0].ToString());
-                    lst.SubItems.Add(products[1].ToString());
-                    lst.SubItems.Add(products[2].ToString());
-                    lst.SubItems.Add(products[3].ToString());
-                    lst.SubItems.Add(products[4].ToString());
-                    lst.SubItems.Add(products[5].ToString());
-                    lst.SubItems.Add(products[6].ToString());
-                    //lst.SubItems.Add(products[9].ToString());
-                    //if (int.Parse(products[6].ToString()) == 0)
-                    //{
-
-                    //    lst.ForeColor = Color.Crimson;
-
-
-                    //}
-                    //else if (int.Parse(products[6].ToString()) <= int.Parse(products[9].ToString()))
-                    //{
-                    //    lst.ForeColor = Color.Orange;
-                    //}
-                }
+                
             }
             catch (Exception ex)
             {
