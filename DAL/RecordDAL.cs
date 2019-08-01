@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO
+namespace DAL
 {
-    public class tblManufacturer
+    class RecordDAL
     {
-        public string ID { get; set; }
-        public string MName { get; set; }
     }
 }

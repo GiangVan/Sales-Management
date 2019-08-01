@@ -10,7 +10,8 @@ namespace DAL
 {
     public class DatabaseService
     {
-        public string stringConnection = @"Data Source=GIANGVAN;Initial Catalog=Database;User ID=user0;Password=123";
+
+        public string stringConnection = @"Data Source=NGONUI\NGONUI;Initial Catalog=Database;Integrated Security=True";
         public SqlConnection connection;
         public SqlCommand command;
         public DatabaseService()
@@ -29,16 +30,16 @@ namespace DAL
                 connection.Close();
         }
         public SqlDataReader ReadData(string sql, SqlParameter[] parameters)
-        {
-            command = new SqlCommand();
-            command.CommandType = CommandType.Text;
-            command.CommandText = sql;
-            command.Connection = connection;
-            OpenConnection();
-            command.Parameters.AddRange(parameters);
-            SqlDataReader reader = command.ExecuteReader();
-            return reader;
-        }
+          {
+              command = new SqlCommand();
+              command.CommandType = CommandType.Text;
+              command.CommandText = sql;
+              command.Connection = connection;
+              OpenConnection();
+              command.Parameters.AddRange(parameters);
+              SqlDataReader reader = command.ExecuteReader();
+              return reader;
+          }
         public SqlDataReader ReadData(string sql)
         {
             command = new SqlCommand();
@@ -57,8 +58,9 @@ namespace DAL
             command.Connection = connection;
             OpenConnection();
             command.Parameters.AddRange(parameters);
-            int result = command.ExecuteNonQuery();
-            return result > 0;
+            int kq = command.ExecuteNonQuery();
+            return kq > 0;
         }
+
     }
 }

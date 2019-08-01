@@ -81,5 +81,31 @@ namespace DAL
             reader.Close();
             return products;
         }
+        public bool Delete(tblProduct product)
+        {
+            return Delete(product.ID);
+        }
+        public bool Delete(string id)
+        {
+            OpenConnection();
+            string sql = "delete from tblProduct where ID=@id";
+            SqlParameter parid = new SqlParameter("@id", SqlDbType.VarChar);
+            parid.Value = id;
+            bool ret = WriteData(sql, new[] { parid });
+            return ret;
+        }
+
+        public bool Update(tblProduct product)
+        {
+            string sql = "update tblProduct set Price=@price, Descrip=@name where ID=@id";
+            SqlParameter parID = new SqlParameter("@id", SqlDbType.VarChar);
+            parID.Value = product.ID;
+            SqlParameter parDescrip = new SqlParameter("@name", SqlDbType.VarChar);
+            parDescrip.Value = product.ID;
+            SqlParameter parPrice = new SqlParameter("@price", SqlDbType.VarChar);
+            parPrice.Value = product.Price;
+            bool ret = WriteData(sql, new[] { parID, parDescrip, parPrice });
+            return ret;
+        }
     }
 }

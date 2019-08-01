@@ -31,5 +31,15 @@ namespace BLL
             LoginDAL dal = new LoginDAL();
             return dal.AddUserDAL(user);
         }
+        public bool DelUserDAL(string id)
+        {
+            LoginDAL dal = new LoginDAL();
+            return dal.DelUserDAL(id);
+        }
+        public bool UpUserDAL(tblLogin user)
+        {
+            LoginDAL dal = new LoginDAL();
+            return dal.UpUserDAL(user);
+        }
     }
 }
