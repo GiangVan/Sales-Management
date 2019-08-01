@@ -14,7 +14,6 @@ namespace GUI
 {
     public partial class frmStore : Form
     {
-        ListViewItem lst;
         public frmStore()
         {
             InitializeComponent();

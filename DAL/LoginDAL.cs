@@ -76,6 +76,25 @@ namespace DAL
             reader.Close();
             return user;
         }
-
+        public bool AddUserDAL(tblLogin user)
+        {
+            string sql = "insert into tblLogin values(@ID, @FullName, @Age, @Address, @Contact, @Username, @Password)";
+            SqlParameter parameterID = new SqlParameter("@ID", SqlDbType.NVarChar);
+            parameterID.Value = user.ID;
+            SqlParameter parameterFullName = new SqlParameter("@FullName", SqlDbType.NVarChar);
+            parameterFullName.Value = user.FullName;
+            SqlParameter parameterAge = new SqlParameter("@Age", SqlDbType.NVarChar);
+            parameterAge.Value = user.Age;
+            SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
+            parameterAddress.Value = user.Address;
+            SqlParameter parameterContact = new SqlParameter("@Contact", SqlDbType.NVarChar);
+            parameterContact.Value = user.Contact;
+            SqlParameter parameterUsername = new SqlParameter("@Username", SqlDbType.NVarChar);
+            parameterUsername.Value = user.Username;
+            SqlParameter parameterPassword = new SqlParameter("@Password", SqlDbType.NVarChar);
+            parameterPassword.Value = user.Password;
+            bool result = WriteData(sql, new[] { parameterID, parameterFullName, parameterAge, parameterAddress, parameterContact, parameterUsername, parameterPassword });
+            return result;
+        }
     }
 }
