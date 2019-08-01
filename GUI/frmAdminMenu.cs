@@ -40,6 +40,12 @@ namespace GUI
             DialogResult dialogResult = MessageBox.Show("Are you sure? ", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
+                tblLogTrail log = new tblLogTrail();
+                LogTrailBLL bll = new LogTrailBLL();
+                log.Dater = DateTime.Now.ToString();
+                log.Descrip = "User: " + lblUser.Text + " has successfully logged Out!";
+                log.Authority = "Admin";
+                bll.Insert(log);
                 this.Close();
                 frmStart frmStart = new frmStart();
                 frmStart.Show();
@@ -72,6 +78,9 @@ namespace GUI
             lbl3.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl2.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
             CLoseFormChild(sender, e);
+            frmUpdateAndDelete frmUpdateAndDelete = new frmUpdateAndDelete();
+            frmUpdateAndDelete.MdiParent = this;
+            frmUpdateAndDelete.Show();
         }
 
         private void BtnSaleRecord_Click(object sender, EventArgs e)
@@ -89,6 +98,9 @@ namespace GUI
             lbl5.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
             CLoseFormChild(sender, e);
+            frmLogTrail frmLogTrail = new frmLogTrail();
+            frmLogTrail.MdiParent = this;
+            frmLogTrail.Show();
         }
 
         private void BtnRestock_Click(object sender, EventArgs e)
@@ -106,6 +118,13 @@ namespace GUI
         private void FrmAdminMenu_Load(object sender, EventArgs e)
         {
             panel2.Focus();
+            foreach (Control control in this.Controls)
+            {
+                if (control is MdiClient)
+                {
+                    control.BackColor = Color.White;
+                }
+            }
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
@@ -116,6 +135,16 @@ namespace GUI
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BtnExit_MouseHover(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Red;
+        }
+
+        private void BtnExit_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Silver;
         }
     }
 }

@@ -96,5 +96,35 @@ namespace DAL
             bool result = WriteData(sql, new[] { parameterID, parameterFullName, parameterAge, parameterAddress, parameterContact, parameterUsername, parameterPassword });
             return result;
         }
+        public bool DelUserDAL(string id)
+        {
+            string del = "delete from tblLogin where ID=@id";
+            SqlParameter parID = new SqlParameter("@id", SqlDbType.VarChar);
+            parID.Value = id;
+            bool kq = WriteData(del, new[] { parID });
+            return kq;
+        }
+
+        public bool UpUserDAL(tblLogin user)
+        {
+            string up = "UPDATE tblLogin SET FullName = @fullname ,Age= @age,Address= @address,Contact= @contact,Username= @username,Password= @pass  where  ID = @id";
+            SqlParameter parID = new SqlParameter("@id", SqlDbType.VarChar);
+            parID.Value = user.ID;
+            SqlParameter parFullname = new SqlParameter("@fullname", SqlDbType.VarChar);
+            parFullname.Value = user.FullName;
+            SqlParameter parAge = new SqlParameter("@age", SqlDbType.VarChar);
+            parAge.Value = user.Age;
+            SqlParameter parAddress = new SqlParameter("@address", SqlDbType.VarChar);
+            parAddress.Value = user.Address;
+            SqlParameter parContact = new SqlParameter("@contact", SqlDbType.VarChar);
+            parContact.Value = user.Contact;
+            SqlParameter parUser = new SqlParameter("@username", SqlDbType.VarChar);
+            parUser.Value = user.Username;
+            SqlParameter parPass = new SqlParameter("@pass", SqlDbType.VarChar);
+            parPass.Value = user.Password;
+
+            bool kq = WriteData(up, new[] { parFullname, parID, parAge, parAddress, parContact, parUser, parPass });
+            return kq;
+        }
     }
 }

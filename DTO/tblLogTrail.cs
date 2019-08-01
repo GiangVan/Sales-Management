@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class tblLogTrail
+    public class tblLogTrail
     {
         public string Dater { get; set; }
         public string Descrip { get; set; }

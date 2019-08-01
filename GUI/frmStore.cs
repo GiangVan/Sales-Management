@@ -21,6 +21,12 @@ namespace GUI
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
+            tblLogTrail log = new tblLogTrail();
+            LogTrailBLL bll = new LogTrailBLL();
+            log.Dater = DateTime.Now.ToString();
+            log.Descrip = "User: " + btnBack.Text + " has successfully logged Out!";
+            log.Authority = "Cashier";
+            bll.Insert(log);
             this.Close();
             frmStart frmStart = new frmStart();
             frmStart.Show();

@@ -17,6 +17,7 @@ namespace GUI
         public frmSaleRecord()
         {
             InitializeComponent();
+            timer1.Start();
         }
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -83,6 +84,11 @@ namespace GUI
             SaleRecordBLL bll = new SaleRecordBLL();
             gvSaleRecord.DataSource = bll.GetAllCash();
             lblTotal.Text = Total().ToString("#,###,##0");
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = DateTime.Now.ToString();
         }
     }
 }

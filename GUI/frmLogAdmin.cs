@@ -33,6 +33,12 @@ namespace GUI
             admin.Password = txtPassword.Text;
             if (logAdminBLL.getLogin(admin).HasRows)
             {
+                tblLogTrail log = new tblLogTrail();
+                LogTrailBLL bll = new LogTrailBLL();
+                log.Dater = lblDateTime.Text;
+                log.Descrip = "User: " + txtUserName.Text + " has successfully Logged In!";
+                log.Authority = "Admin";
+                bll.Insert(log);
                 frmStart frmStart = (frmStart)Application.OpenForms["frmStart"];
                 frmStart.Hide();
                 frmAdminMenu frmAdminMenu = new frmAdminMenu();

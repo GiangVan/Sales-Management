@@ -21,5 +21,18 @@ namespace BLL
             ProductDAL dal = new ProductDAL();
             return dal.SearchProductDAL(Descrition);
         }
+        public bool Delete(string id)
+        {
+            ProductDAL dal = new ProductDAL();
+            return dal.Delete(id);
+        }
+        public bool Delete(tblProduct product)
+        {
+            return Delete(product.ID);
+        }
+        public bool Update(tblProduct product)
+        {
+            return new ProductDAL().Update(product);
+        }
     }
 }

@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddManufac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddManufac.Designer.cs">
+      <DependentUpon>frmAddManufac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogTrail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogTrail.designer.cs">
+      <DependentUpon>frmLogTrail.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSaleRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,7 +95,7 @@
     <Compile Include="frmStaffManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaffManage.Designer.cs">
+    <Compile Include="frmStaffManage.designer.cs">
       <DependentUpon>frmStaffManage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStart.cs">
@@ -98,6 +116,12 @@
     <Compile Include="frmStore.Designer.cs">
       <DependentUpon>frmStore.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateAndDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateAndDelete.Designer.cs">
+      <DependentUpon>frmUpdateAndDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmViewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +130,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddManufac.resx">
+      <DependentUpon>frmAddManufac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminMenu.resx">
       <DependentUpon>frmAdminMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogTrail.resx">
+      <DependentUpon>frmLogTrail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSaleRecord.resx">
       <DependentUpon>frmSaleRecord.cs</DependentUpon>
@@ -129,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStore.resx">
       <DependentUpon>frmStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAndDelete.resx">
+      <DependentUpon>frmUpdateAndDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewProduct.resx">
       <DependentUpon>frmViewProduct.cs</DependentUpon>

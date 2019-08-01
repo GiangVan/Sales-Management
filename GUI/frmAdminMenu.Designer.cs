@@ -156,12 +156,14 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::GUI.Properties.Resources.cancel;
-            this.btnExit.Location = new System.Drawing.Point(908, 7);
+            this.btnExit.Location = new System.Drawing.Point(903, 7);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(32, 32);
+            this.btnExit.Size = new System.Drawing.Size(34, 32);
             this.btnExit.TabIndex = 9;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.btnExit.MouseLeave += new System.EventHandler(this.BtnExit_MouseLeave);
+            this.btnExit.MouseHover += new System.EventHandler(this.BtnExit_MouseHover);
             // 
             // lblUser
             // 
@@ -184,7 +186,7 @@
             this.btnLogRecord.Name = "btnLogRecord";
             this.btnLogRecord.Size = new System.Drawing.Size(100, 34);
             this.btnLogRecord.TabIndex = 6;
-            this.btnLogRecord.Text = "Log";
+            this.btnLogRecord.Text = "Login Record";
             this.btnLogRecord.UseVisualStyleBackColor = true;
             this.btnLogRecord.Click += new System.EventHandler(this.BtnLogRecord_Click);
             // 

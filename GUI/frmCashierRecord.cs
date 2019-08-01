@@ -16,6 +16,7 @@ namespace GUI
         public frmCashierRecord()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void BtnOkay_Click(object sender, EventArgs e)
@@ -61,6 +62,11 @@ namespace GUI
         {
             SaleRecordBLL bll = new SaleRecordBLL();
             gvCashierList.DataSource = bll.Search(txtSearch.Text);
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = DateTime.Now.ToString();
         }
     }
 }
