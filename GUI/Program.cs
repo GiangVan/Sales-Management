@@ -18,7 +18,8 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new frmAdminMenu());
+            Application.Run(new frmStart());
+
         }
     }
 }

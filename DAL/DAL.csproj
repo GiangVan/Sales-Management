@@ -45,9 +45,10 @@
     <Compile Include="DatabaseService.cs" />
     <Compile Include="LogAdminDAL.cs" />
     <Compile Include="LoginDAL.cs" />
+    <Compile Include="LogTrailDAL.cs" />
+    <Compile Include="ManufacDAL.cs" />
     <Compile Include="ProductDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoveAllDAL.cs" />
     <Compile Include="SaleRecordDAL.cs" />
   </ItemGroup>
   <ItemGroup>

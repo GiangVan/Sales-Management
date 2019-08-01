@@ -168,9 +168,11 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnback;
             this.ClientSize = new System.Drawing.Size(320, 500);
             this.Controls.Add(this.lblDateTime);
             this.Controls.Add(this.label1);

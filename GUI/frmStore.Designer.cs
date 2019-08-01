@@ -33,15 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lstCart = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnRemove = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,7 +54,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.txtStock = new System.Windows.Forms.TextBox();
-            this.lstProduct = new System.Windows.Forms.ListView();
             this.label17 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.TextBox();
@@ -98,84 +88,26 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhoneEmail = new System.Windows.Forms.TextBox();
+            this.grdProduct = new System.Windows.Forms.DataGridView();
+            this.grdCart = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.lstCart);
+            this.panel4.Controls.Add(this.grdCart);
             this.panel4.Controls.Add(this.btnRemove);
             this.panel4.Controls.Add(this.lblDate);
             this.panel4.Location = new System.Drawing.Point(669, 10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(523, 435);
             this.panel4.TabIndex = 81;
-            // 
-            // lstCart
-            // 
-            this.lstCart.BackColor = System.Drawing.Color.White;
-            this.lstCart.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader1,
-            this.columnHeader2});
-            this.lstCart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lstCart.FullRowSelect = true;
-            this.lstCart.GridLines = true;
-            this.lstCart.HideSelection = false;
-            this.lstCart.Location = new System.Drawing.Point(12, 35);
-            this.lstCart.Name = "lstCart";
-            this.lstCart.Size = new System.Drawing.Size(499, 349);
-            this.lstCart.TabIndex = 46;
-            this.lstCart.UseCompatibleStateImageBehavior = false;
-            this.lstCart.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "P ID";
-            this.columnHeader4.Width = 0;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Description";
-            this.columnHeader5.Width = 150;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Price";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Qty";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Total";
-            this.columnHeader8.Width = 90;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Type";
-            this.columnHeader9.Width = 80;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Size";
-            this.columnHeader1.Width = 80;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Brand";
-            this.columnHeader2.Width = 80;
             // 
             // btnRemove
             // 
@@ -200,7 +132,7 @@
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDate.Location = new System.Drawing.Point(15, 11);
+            this.lblDate.Location = new System.Drawing.Point(18, 5);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(50, 21);
             this.lblDate.TabIndex = 69;
@@ -291,7 +223,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label16.Location = new System.Drawing.Point(246, 35);
+            this.label16.Location = new System.Drawing.Point(304, 5);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(50, 21);
             this.label16.TabIndex = 68;
@@ -303,7 +235,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(9, 35);
+            this.label15.Location = new System.Drawing.Point(67, 5);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(42, 21);
             this.label15.TabIndex = 67;
@@ -360,7 +292,7 @@
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblUser.Location = new System.Drawing.Point(57, 35);
+            this.lblUser.Location = new System.Drawing.Point(115, 5);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(42, 21);
             this.lblUser.TabIndex = 67;
@@ -401,9 +333,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.grdProduct);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.txtStock);
-            this.panel1.Controls.Add(this.lstProduct);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtSize);
@@ -461,22 +393,6 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(149, 27);
             this.txtStock.TabIndex = 69;
-            // 
-            // lstProduct
-            // 
-            this.lstProduct.BackColor = System.Drawing.Color.White;
-            this.lstProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstProduct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lstProduct.FullRowSelect = true;
-            this.lstProduct.GridLines = true;
-            this.lstProduct.HideSelection = false;
-            this.lstProduct.Location = new System.Drawing.Point(10, 63);
-            this.lstProduct.Name = "lstProduct";
-            this.lstProduct.Size = new System.Drawing.Size(384, 291);
-            this.lstProduct.TabIndex = 45;
-            this.lstProduct.UseCompatibleStateImageBehavior = false;
-            this.lstProduct.View = System.Windows.Forms.View.Details;
             // 
             // label17
             // 
@@ -549,6 +465,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(141, 27);
             this.txtSearch.TabIndex = 55;
+            this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
             // txtBrand
             // 
@@ -577,7 +494,7 @@
             this.lblTimer.BackColor = System.Drawing.Color.Transparent;
             this.lblTimer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTimer.Location = new System.Drawing.Point(298, 35);
+            this.lblTimer.Location = new System.Drawing.Point(356, 5);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(92, 21);
             this.lblTimer.TabIndex = 42;
@@ -853,6 +770,22 @@
             this.txtPhoneEmail.Size = new System.Drawing.Size(492, 27);
             this.txtPhoneEmail.TabIndex = 68;
             // 
+            // grdProduct
+            // 
+            this.grdProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdProduct.Location = new System.Drawing.Point(4, 35);
+            this.grdProduct.Name = "grdProduct";
+            this.grdProduct.Size = new System.Drawing.Size(390, 316);
+            this.grdProduct.TabIndex = 71;
+            // 
+            // grdCart
+            // 
+            this.grdCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdCart.Location = new System.Drawing.Point(4, 35);
+            this.grdCart.Name = "grdCart";
+            this.grdCart.Size = new System.Drawing.Size(515, 349);
+            this.grdCart.TabIndex = 70;
+            // 
             // frmStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -874,6 +807,8 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -881,15 +816,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListView lstCart;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label9;
@@ -911,7 +837,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.ListView lstProduct;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSize;
@@ -946,5 +871,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtPhoneEmail;
+        private System.Windows.Forms.DataGridView grdCart;
+        private System.Windows.Forms.DataGridView grdProduct;
     }
 }

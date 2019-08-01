@@ -28,9 +28,16 @@ namespace GUI
             login.Password = txtPassword.Text;
             if (loginBLL.getLogin(login).HasRows)
             {
-                MessageBox.Show("Welcome", "Susscess", MessageBoxButtons.OK, MessageBoxIcon.None);
+                tblLogTrail log = new tblLogTrail();
+                LogTrailBLL bll = new LogTrailBLL();
+                log.Dater = lblDateTime.Text;
+                log.Descrip = "User: " + txtUserName.Text + " has successfully Logged In!";
+                log.Authority = "Cashier";
+                bll.Insert(log);
                 frmStart frmStart = (frmStart)Application.OpenForms["frmStart"];
                 frmStart.Hide();
+                frmStore frmStore = new frmStore();
+                frmStore.Show();
                 this.Hide();
             }
             else

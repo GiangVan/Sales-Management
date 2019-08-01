@@ -15,7 +15,16 @@ namespace BLL
             LogTrailDAL dal = new LogTrailDAL();
             return dal.GetTblLogTrails();
         }
-       
+        public bool Insert(tblLogTrail log)
+        {
+            LogTrailDAL dal = new LogTrailDAL();
+            return dal.Insert(log);
+        }
+        public List<tblLogTrail> RemoveLogTrailsBLL()
+        {
+            LogTrailDAL dal = new LogTrailDAL();
+            return dal.RemoveLogTrailsDAL();
+        }
     }
     
 }

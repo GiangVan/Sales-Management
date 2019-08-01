@@ -19,5 +19,10 @@ namespace BLL
             CashierRecordDAL dal = new CashierRecordDAL();
             return dal.search(descrip);
         }
+        public List<tblCashierRecord> DeleteAllCashier()
+        {
+            CashierRecordDAL dal = new CashierRecordDAL();
+            return dal.DeleteAllCashier();
+        }
     }
 }

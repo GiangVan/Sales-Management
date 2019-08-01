@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogTrail));
             this.lblDate = new System.Windows.Forms.Label();
             this.cboSort = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gvLogTrail = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemoveAll = new System.Windows.Forms.Button();
-            this.gvLogTrail = new System.Windows.Forms.DataGridView();
+
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvLogTrail)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +55,8 @@
             this.lblDate.Size = new System.Drawing.Size(67, 21);
             this.lblDate.TabIndex = 70;
             this.lblDate.Text = "Sort by:";
+            this.lblDate.Click += new System.EventHandler(this.LblDate_Click);
+
             // 
             // cboSort
             // 
@@ -61,7 +68,9 @@
             "Default",
             "Cashier",
             "Admin"});
-            this.cboSort.Location = new System.Drawing.Point(97, 12);
+
+            this.cboSort.Location = new System.Drawing.Point(97, 8);
+
             this.cboSort.Name = "cboSort";
             this.cboSort.Size = new System.Drawing.Size(130, 29);
             this.cboSort.TabIndex = 62;
@@ -77,8 +86,42 @@
             this.panel1.Controls.Add(this.btnRemoveAll);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(656, 400);
+            this.panel1.Size = new System.Drawing.Size(926, 501);
             this.panel1.TabIndex = 72;
+            // 
+            // gvLogTrail
+            // 
+            this.gvLogTrail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gvLogTrail.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvLogTrail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gvLogTrail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvLogTrail.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gvLogTrail.Location = new System.Drawing.Point(28, 44);
+            this.gvLogTrail.Name = "gvLogTrail";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvLogTrail.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gvLogTrail.Size = new System.Drawing.Size(881, 396);
+            this.gvLogTrail.TabIndex = 71;
             // 
             // button1
             // 
@@ -89,7 +132,9 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(551, 351);
+
+            this.button1.Location = new System.Drawing.Point(834, 461);
+
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 37);
             this.button1.TabIndex = 48;
@@ -107,7 +152,9 @@
             this.btnRemoveAll.ForeColor = System.Drawing.Color.White;
             this.btnRemoveAll.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveAll.Image")));
             this.btnRemoveAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoveAll.Location = new System.Drawing.Point(28, 351);
+
+            this.btnRemoveAll.Location = new System.Drawing.Point(28, 461);
+
             this.btnRemoveAll.Name = "btnRemoveAll";
             this.btnRemoveAll.Size = new System.Drawing.Size(131, 37);
             this.btnRemoveAll.TabIndex = 47;
@@ -116,23 +163,16 @@
             this.btnRemoveAll.UseVisualStyleBackColor = false;
             this.btnRemoveAll.Click += new System.EventHandler(this.BtnRemoveAll_Click);
             // 
-            // gvLogTrail
-            // 
-            this.gvLogTrail.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gvLogTrail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvLogTrail.Location = new System.Drawing.Point(28, 44);
-            this.gvLogTrail.Name = "gvLogTrail";
-            this.gvLogTrail.Size = new System.Drawing.Size(598, 301);
-            this.gvLogTrail.TabIndex = 71;
-            // 
             // frmLogTrail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 423);
+            this.ClientSize = new System.Drawing.Size(950, 525);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogTrail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+
             this.Text = "frmLogTrail";
             this.Load += new System.EventHandler(this.FrmLogTrail_Load);
             this.panel1.ResumeLayout(false);

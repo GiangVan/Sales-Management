@@ -8,30 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-using DTO;
-
 namespace GUI
 {
-    public partial class frmStore : Form
+    public partial class frmViewProduct : Form
     {
-        public frmStore()
+        public frmViewProduct()
         {
             InitializeComponent();
         }
 
-        private void BtnBack_Click(object sender, EventArgs e)
+        private void BtnOkay_Click(object sender, EventArgs e)
         {
-            tblLogTrail log = new tblLogTrail();
-            LogTrailBLL bll = new LogTrailBLL();
-            log.Dater = DateTime.Now.ToString();
-            log.Descrip = "User: " + btnBack.Text + " has successfully logged Out!";
-            log.Authority = "Cashier";
-            bll.Insert(log);
             this.Close();
-            frmStart frmStart = new frmStart();
-            frmStart.Show();
         }
-        private void FrmStore_Load(object sender, EventArgs e)
+
+        private void FrmViewProduct_Load(object sender, EventArgs e)
         {
             ProductBLL bll = new ProductBLL();
             grdProduct.DataSource =  bll.GetProducts();
@@ -41,6 +32,11 @@ namespace GUI
         {
             ProductBLL bll = new ProductBLL();
             grdProduct.DataSource = bll.SearchProductBLL(txtSearch.Text);
+        }
+
+        private void GrdProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
