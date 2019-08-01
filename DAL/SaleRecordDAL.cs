@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using DTO;
 namespace DAL
 {
@@ -101,6 +102,46 @@ namespace DAL
             }
             reader.Close();
             return dsSaleRe;
+        }
+        public void AddCash(ListView.ListViewItemCollection collection, string userID)
+        {
+            string sql = @"INSERT INTO tblRecord([ID],[Description],[Price],[Quantity],[TotalSum],[Type],[Size],[Brand],[DateTime]) VALUES(@row1,@row2,@row3,@row4,@row5,@row6,@row7,@row8,@Date1)";
+            connection.Open();
+            SqlCommand cm = new SqlCommand(sql, connection);
+
+            foreach (ListViewItem li in collection)
+            {
+                cm.Parameters.AddWithValue("@row1", li.SubItems[0].Text);
+                cm.Parameters.AddWithValue("@row2", li.SubItems[1].Text);
+                cm.Parameters.AddWithValue("@row3", li.SubItems[2].Text);
+                cm.Parameters.AddWithValue("@row4", li.SubItems[3].Text);
+                cm.Parameters.AddWithValue("@row5", li.SubItems[4].Text);
+                cm.Parameters.AddWithValue("@row6", li.SubItems[5].Text);
+                cm.Parameters.AddWithValue("@row7", li.SubItems[6].Text);
+                cm.Parameters.AddWithValue("@row8", li.SubItems[7].Text);
+            }
+            
+            cm.Parameters.AddWithValue("@Date1", DateTime.Now.ToString());
+            cm.ExecuteNonQuery(); //ExecuteNonQuery passes a connection string to database or SQL.
+            //
+            string sql2 = @"INSERT INTO tblCashierRecord([Cashier],[PID],[Descrip],[Price],[Quantity],[TotalSum],[Type],[Size],[Brand],[DateTime]) VALUES(@row1,@row2,@row3,@row4,@row5,@row6,@row7,@row8,@row9,@row10)";
+            cm = new SqlCommand(sql2, connection);
+
+            foreach (ListViewItem li in collection)
+            {
+                cm.Parameters.AddWithValue("@row1", userID);
+                cm.Parameters.AddWithValue("@row2", li.SubItems[0].Text);
+                cm.Parameters.AddWithValue("@row3", li.SubItems[1].Text);
+                cm.Parameters.AddWithValue("@row4", li.SubItems[2].Text);
+                cm.Parameters.AddWithValue("@row5", li.SubItems[3].Text);
+                cm.Parameters.AddWithValue("@row6", li.SubItems[4].Text);
+                cm.Parameters.AddWithValue("@row7", li.SubItems[5].Text);
+                cm.Parameters.AddWithValue("@row8", li.SubItems[6].Text);
+                cm.Parameters.AddWithValue("@row9", li.SubItems[7].Text);
+            }
+
+            cm.Parameters.AddWithValue("@row10", DateTime.Now.ToString());
+            cm.ExecuteNonQuery();
         }
     }
 }

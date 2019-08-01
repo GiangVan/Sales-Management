@@ -10,6 +10,7 @@ namespace DAL
 {
     public class DatabaseService
     {
+
         public string stringConnection = @"Data Source=NGONUI\NGONUI;Initial Catalog=Database;Integrated Security=True";
         public SqlConnection connection;
         public SqlCommand command;
