@@ -27,8 +27,6 @@ namespace BLL
         }
         public static bool AddCash(ListView lstvCart, string userID, string payment, string bill)
         {
-            SaleRecordDAL saleRecordDAL = new SaleRecordDAL();
-            saleRecordDAL.AddCash(lstvCart.Items, userID);
             try
             {
                 if (string.IsNullOrWhiteSpace(payment))
@@ -41,8 +39,8 @@ namespace BLL
                     MessageBox.Show("Insufficient Cash!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-                //SaleRecordDAL saleRecordDAL = new SaleRecordDAL();
-                //saleRecordDAL.AddCash(lstvCart.Items, userID);
+                SaleRecordDAL saleRecordDAL = new SaleRecordDAL();
+                saleRecordDAL.AddCash(lstvCart.Items, userID);
             }
             catch (Exception ex)
             {
