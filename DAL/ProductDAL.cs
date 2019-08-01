@@ -43,6 +43,11 @@ namespace DAL
             reader.Close();
             return products;
         }
+        public void SetStockOfProduct(string productID, string stock)
+        {
+            string sql = @"UPDATE tblProduct SET [Stock] = '" + stock + "' where [ID]='" + productID + "'";
+            ReadData(sql);
+        }
         public List<tblProduct> SearchProductDAL(string Description)
         {
             string sql = "select * from tblProduct where Descrip Like '" + Description + "%'";

@@ -25,7 +25,7 @@ namespace GUI
         private void FrmViewProduct_Load(object sender, EventArgs e)
         {
             ProductBLL bll = new ProductBLL();
-            grdProduct.DataSource =  bll.GetProducts();
+            grdProduct.DataSource = ProductBLL.static_GetProducts();
         }
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)

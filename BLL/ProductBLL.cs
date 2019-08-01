@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using DTO;
 using DAL;
-using System.Drawing;
 
 namespace BLL
 {
@@ -18,30 +17,55 @@ namespace BLL
             ProductDAL dal = new ProductDAL();
             return dal.GetProductsDAL();
         }
-        public static void PushDataToListView(ListView lstv)
+        public static List<tblProduct> static_GetProducts()
         {
-            ProductDAL products = new ProductDAL();
-            ListViewItem product;
-            foreach (tblProduct item in products.GetProductsDAL())
+            ProductDAL dal = new ProductDAL();
+            return dal.GetProductsDAL();
+        }
+        public static void SetStockOfProduct(string productID, string stock)
+        {
+            ProductDAL productDAL = new ProductDAL();
+            productDAL.SetStockOfProduct(productID, stock.ToString());
+        }
+        public static bool DecrementStockOfProduct(string productID, string quantity, string stock)
+        {
+            try
             {
-                product = lstv.Items.Add(item.ID);
-                product.SubItems.Add(item.Descrip);
-                product.SubItems.Add(item.Price);
-                product.SubItems.Add(item.Type);
-                product.SubItems.Add(item.Size);
-                product.SubItems.Add(item.Brand);
-                product.SubItems.Add(item.Stock);
-                product.SubItems.Add(item.CritLimit);
-                // set product color
-                if (Convert.ToInt32(item.Stock) == 0)
+                if (string.IsNullOrWhiteSpace(productID) || string.IsNullOrWhiteSpace(quantity))
                 {
-                    product.ForeColor = Color.Crimson;
+                    MessageBox.Show("Please select product from the list OR input Quantity if empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
-                else if (Convert.ToInt32(item.Stock) <= Convert.ToInt32(item.CritLimit))
+
+                double currQty = Convert.ToDouble(quantity);
+                double currStock = Convert.ToDouble(stock);
+                double finStock = currStock - currQty;
+
+                if (currQty == 0 || currStock == 0)
                 {
-                    product.ForeColor = Color.Orange;
+                    MessageBox.Show("Quantity or Stock is unavailable!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                else if (currStock < 0)
+                {
+                    return false;
+                }
+                else if (currQty > currStock)
+                {
+                    MessageBox.Show("Limited Stock Available!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                else
+                {
+                    SetStockOfProduct(productID, finStock.ToString());
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "No Items to Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
         public List<tblProduct> SearchProductBLL(string Descrition)
         {
