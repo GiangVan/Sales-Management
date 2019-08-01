@@ -84,6 +84,7 @@
             this.panel2.Size = new System.Drawing.Size(150, 46);
             this.panel2.TabIndex = 1;
             this.panel2.Click += new System.EventHandler(this.Panel2_Click);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // lbl7
             // 

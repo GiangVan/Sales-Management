@@ -27,7 +27,14 @@ namespace GUI
                 Application.Exit();
             }
         }
-
+        private void CLoseFormChild(object sender, EventArgs e)
+        {
+            Form[] childArray = this.MdiChildren;
+            foreach (Form childForm in childArray)
+            {
+                childForm.Close();
+            }
+        }
         private void LblUser_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure? ", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -44,6 +51,7 @@ namespace GUI
         {
             lbl1.BackColor = Color.SkyBlue;
             lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
+            CLoseFormChild(sender, e);
             frmViewProduct frmViewProduct = new frmViewProduct();
             frmViewProduct.MdiParent = this;
             frmViewProduct.Show();
@@ -53,6 +61,7 @@ namespace GUI
         {
             lbl2.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
+            CLoseFormChild(sender, e);
             frmStaffManage frmStaffManage = new frmStaffManage();
             frmStaffManage.MdiParent = this;
             frmStaffManage.Show();
@@ -62,12 +71,14 @@ namespace GUI
         {
             lbl3.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl2.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
+            CLoseFormChild(sender, e);
         }
 
         private void BtnSaleRecord_Click(object sender, EventArgs e)
         {
             lbl4.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
+            CLoseFormChild(sender, e);
             frmSaleRecord frmSaleRecord = new frmSaleRecord();
             frmSaleRecord.MdiParent = this;
             frmSaleRecord.Show();
@@ -77,17 +88,20 @@ namespace GUI
         {
             lbl5.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
+            CLoseFormChild(sender, e);
         }
 
         private void BtnRestock_Click(object sender, EventArgs e)
         {
             lbl6.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl7.BackColor = Color.White;
+            CLoseFormChild(sender, e);
         }
         private void Panel2_Click(object sender, EventArgs e)
         {
             lbl7.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = Color.White;
+            CLoseFormChild(sender, e);
         }
         private void FrmAdminMenu_Load(object sender, EventArgs e)
         {
@@ -95,6 +109,11 @@ namespace GUI
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
