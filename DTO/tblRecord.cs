@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
+
+
     public class tblRecord
     {
         public string ID { get; set; }

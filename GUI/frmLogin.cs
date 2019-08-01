@@ -42,7 +42,7 @@ namespace GUI
             }
             else
             {
-                DialogResult = MessageBox.Show("Không được phép truy cập! ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                DialogResult = MessageBox.Show("Khôngg được phép truy cập! ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
 
         }

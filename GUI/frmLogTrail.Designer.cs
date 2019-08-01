@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogTrail));
             this.lblDate = new System.Windows.Forms.Label();
             this.cboSort = new System.Windows.Forms.ComboBox();
@@ -38,6 +39,7 @@
             this.gvLogTrail = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemoveAll = new System.Windows.Forms.Button();
+
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvLogTrail)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +56,7 @@
             this.lblDate.TabIndex = 70;
             this.lblDate.Text = "Sort by:";
             this.lblDate.Click += new System.EventHandler(this.LblDate_Click);
+
             // 
             // cboSort
             // 
@@ -65,7 +68,9 @@
             "Default",
             "Cashier",
             "Admin"});
+
             this.cboSort.Location = new System.Drawing.Point(97, 8);
+
             this.cboSort.Name = "cboSort";
             this.cboSort.Size = new System.Drawing.Size(130, 29);
             this.cboSort.TabIndex = 62;
@@ -127,7 +132,9 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+
             this.button1.Location = new System.Drawing.Point(834, 461);
+
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 37);
             this.button1.TabIndex = 48;
@@ -145,7 +152,9 @@
             this.btnRemoveAll.ForeColor = System.Drawing.Color.White;
             this.btnRemoveAll.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveAll.Image")));
             this.btnRemoveAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+
             this.btnRemoveAll.Location = new System.Drawing.Point(28, 461);
+
             this.btnRemoveAll.Name = "btnRemoveAll";
             this.btnRemoveAll.Size = new System.Drawing.Size(131, 37);
             this.btnRemoveAll.TabIndex = 47;
@@ -163,6 +172,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogTrail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+
             this.Text = "frmLogTrail";
             this.Load += new System.EventHandler(this.FrmLogTrail_Load);
             this.panel1.ResumeLayout(false);

@@ -15,6 +15,7 @@ namespace GUI
 {
     public partial class frmLogTrail : Form
     {
+
         
         public frmLogTrail()
         {
@@ -23,6 +24,7 @@ namespace GUI
             InitializeComponent();
         
          
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -63,6 +65,7 @@ namespace GUI
 
         }
 
+
         private void BtnRemoveAll_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("You want to delete all record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
@@ -78,5 +81,6 @@ namespace GUI
         {
 
         }
+
     }
 }

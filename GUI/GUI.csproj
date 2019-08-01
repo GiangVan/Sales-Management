@@ -86,11 +86,13 @@
     <Compile Include="frmLogTrail.designer.cs">
       <DependentUpon>frmLogTrail.cs</DependentUpon>
     </Compile>
+
     <Compile Include="frmSaleRecord.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSaleRecord.designer.cs">
       <DependentUpon>frmSaleRecord.cs</DependentUpon>
+
     </Compile>
     <Compile Include="frmStaffManage.cs">
       <SubType>Form</SubType>
@@ -145,11 +147,14 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="frmLogTrail.resx">
       <DependentUpon>frmLogTrail.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="frmSaleRecord.resx">
       <DependentUpon>frmSaleRecord.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="frmStaffManage.resx">
       <DependentUpon>frmStaffManage.cs</DependentUpon>

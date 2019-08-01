@@ -13,6 +13,7 @@ namespace DAL
         public List<tblLogTrail> GetTblLogTrails()
         {
             SqlDataReader reader = ReadData("select * from tblLogTrail order by Dater desc");
+
             List<tblLogTrail> dsLogTrail = new List<tblLogTrail>();
             while (reader.Read())
             {
@@ -61,6 +62,5 @@ namespace DAL
             reader.Close();
             return dslog;
         }
-
     }
 }
