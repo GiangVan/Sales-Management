@@ -33,9 +33,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.grvProduct = new System.Windows.Forms.DataGridView();
+            this.grdProduct = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDone
@@ -83,7 +83,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.grvProduct);
+            this.panel1.Controls.Add(this.grdProduct);
             this.panel1.Controls.Add(this.btnDone);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label1);
@@ -92,13 +92,14 @@
             this.panel1.Size = new System.Drawing.Size(926, 501);
             this.panel1.TabIndex = 52;
             // 
-            // grvProduct
+            // grdProduct
             // 
-            this.grvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvProduct.Location = new System.Drawing.Point(3, 3);
-            this.grvProduct.Name = "grvProduct";
-            this.grvProduct.Size = new System.Drawing.Size(920, 446);
-            this.grvProduct.TabIndex = 50;
+            this.grdProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdProduct.Location = new System.Drawing.Point(3, 3);
+            this.grdProduct.Name = "grdProduct";
+            this.grdProduct.Size = new System.Drawing.Size(920, 446);
+            this.grdProduct.TabIndex = 50;
+            this.grdProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdProduct_CellContentClick);
             // 
             // frmViewProduct
             // 
@@ -112,7 +113,7 @@
             this.Load += new System.EventHandler(this.FrmViewProduct_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,6 +124,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView grvProduct;
+        private System.Windows.Forms.DataGridView grdProduct;
     }
 }

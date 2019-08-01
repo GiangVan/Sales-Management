@@ -25,13 +25,18 @@ namespace GUI
         private void FrmViewProduct_Load(object sender, EventArgs e)
         {
             ProductBLL bll = new ProductBLL();
-            grvProduct.DataSource =  bll.GetProducts();
+            grdProduct.DataSource =  bll.GetProducts();
         }
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
             ProductBLL bll = new ProductBLL();
-            grvProduct.DataSource = bll.SearchProductBLL(txtSearch.Text);
+            grdProduct.DataSource = bll.SearchProductBLL(txtSearch.Text);
+        }
+
+        private void GrdProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -18,17 +18,6 @@ namespace GUI
         {
             InitializeComponent();
         }
-
-        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-    
-        }
-
-
-        private void GvSaleRecord_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            
@@ -43,12 +32,6 @@ namespace GUI
             }
             return Total;
         }
-        private void BtnReport_Click(object sender, EventArgs e)
-        {
-            SaleRecordBLL bll = new SaleRecordBLL();
-            gvSaleRecord.DataSource = bll.GetAllCash();
-            lblTotal.Text = Total().ToString("#,###,##0");
-        }
 
         private void FrmSaleRecord_Load(object sender, EventArgs e)
         {                                                                
@@ -59,13 +42,20 @@ namespace GUI
 
         private void BtnRemoveAll_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("You want to delete all record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (gvSaleRecord.RowCount == 0)
             {
-                RemoveAllBLL bll = new RemoveAllBLL();
-                gvSaleRecord.DataSource = bll.GetAllCash();
-                lblTotal.Text = Total().ToString("#,###,##0");
-                MessageBox.Show("All record have delete");
-            }          
+                MessageBox.Show("Nothing to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (MessageBox.Show("You want to delete all record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    SaleRecordBLL bll = new SaleRecordBLL();
+                    bll.DeleteAllCash();
+                    lblTotal.Text = Total().ToString("#,###,##0");
+                    MessageBox.Show("All record have delete");
+                }
+            }  
         }
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
@@ -86,6 +76,13 @@ namespace GUI
         private void BtnDone_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnRefesh_Click(object sender, EventArgs e)
+        {
+            SaleRecordBLL bll = new SaleRecordBLL();
+            gvSaleRecord.DataSource = bll.GetAllCash();
+            lblTotal.Text = Total().ToString("#,###,##0");
         }
     }
 }

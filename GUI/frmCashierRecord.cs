@@ -50,8 +50,8 @@ namespace GUI
         {
             if (MessageBox.Show("You want to delete all cashier record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                RemoveAllBLL bll = new RemoveAllBLL();
-                gvCashierList.DataSource = bll.GetAllCashier();
+                CashierRecordBLL bll = new CashierRecordBLL();
+                bll.DeleteAllCashier();
                 lblTotal.Text = Total().ToString("#,###,##0");
                 MessageBox.Show("All cashier record have delete");
             } 

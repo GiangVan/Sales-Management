@@ -44,12 +44,18 @@ namespace GUI
         {
             lbl1.BackColor = Color.SkyBlue;
             lbl2.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
+            frmViewProduct frmViewProduct = new frmViewProduct();
+            frmViewProduct.MdiParent = this;
+            frmViewProduct.Show();
         }
 
         private void BtnStaffManagement_Click(object sender, EventArgs e)
         {
             lbl2.BackColor = Color.SkyBlue;
             lbl1.BackColor = lbl3.BackColor = lbl4.BackColor = lbl5.BackColor = lbl6.BackColor = lbl7.BackColor = Color.White;
+            frmStaffManage frmStaffManage = new frmStaffManage();
+            frmStaffManage.MdiParent = this;
+            frmStaffManage.Show();
         }
 
         private void BtnProductManagement_Click(object sender, EventArgs e)

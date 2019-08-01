@@ -16,5 +16,15 @@ namespace BLL
             LoginDAL dal = new LoginDAL();
             return dal.getLogin(login);
         }
+        public List<tblLogin> GetUserDAL()
+        {
+            LoginDAL dal = new LoginDAL();
+            return dal.GetUserDAL();
+        }
+        public List<tblLogin> SearchUserDAL(string name)
+        {
+            LoginDAL dal = new LoginDAL();
+            return dal.SearchUserDAL(name);
+        }
     }
 }

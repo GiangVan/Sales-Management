@@ -28,9 +28,10 @@ namespace GUI
             login.Password = txtPassword.Text;
             if (loginBLL.getLogin(login).HasRows)
             {
-                MessageBox.Show("Welcome", "Susscess", MessageBoxButtons.OK, MessageBoxIcon.None);
                 frmStart frmStart = (frmStart)Application.OpenForms["frmStart"];
                 frmStart.Hide();
+                frmStore frmStore = new frmStore();
+                frmStore.Show();
                 this.Hide();
             }
             else

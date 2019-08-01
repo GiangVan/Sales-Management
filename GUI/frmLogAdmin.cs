@@ -33,7 +33,6 @@ namespace GUI
             admin.Password = txtPassword.Text;
             if (logAdminBLL.getLogin(admin).HasRows)
             {
-                MessageBox.Show("Welcome", "Susscess", MessageBoxButtons.OK, MessageBoxIcon.None);
                 frmStart frmStart = (frmStart)Application.OpenForms["frmStart"];
                 frmStart.Hide();
                 frmAdminMenu frmAdminMenu = new frmAdminMenu();

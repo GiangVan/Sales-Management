@@ -19,5 +19,10 @@ namespace BLL
             SaleRecordDAL SaleRecord = new SaleRecordDAL();
             return SaleRecord.search(Description);
         }
+        public List<tblRecord> DeleteAllCash()
+        {
+            SaleRecordDAL saleRecord = new SaleRecordDAL();
+            return saleRecord.DeleteAllCash();
+        }
     }
 }
