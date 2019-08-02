@@ -17,6 +17,8 @@ namespace GUI
         public frmStore()
         {
             InitializeComponent();
+
+            lblTimeLoggedIn.Text = DateTime.Now.ToString();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -216,11 +218,17 @@ namespace GUI
 
                 lstvCart.Items.Clear();
 
-                txtBill.Text = "";
-                txtChange.Text = "";
-                txtPayment.Text = "";
-                txtStock.Text = "";
+                try
+                {
+                    txtChange.Text = (-double.Parse(txtBill.Text) + double.Parse(txtPayment.Text)).ToString();
+                }
+                catch{ }
             }
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = DateTime.Now.ToString();
         }
     }
 }
